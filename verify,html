@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Certificate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Certificate Verification</h1>
+
+  <input type="text" id="certificateId" placeholder="Enter Certificate ID">
+  <button id="verifyBtn">Verify</button>
+
+  <div id="result"></div>
+
+  <script type="module">
+    import { db } from "./firebase-config.js";
+
+    document.getElementById("verifyBtn").addEventListener("click", () => {
+      const id = document.getElementById("certificateId").value;
+      document.getElementById("result").innerHTML =
+        "Searching for certificate: " + id;
+    });
+  </script>
+</body>
+</html>
