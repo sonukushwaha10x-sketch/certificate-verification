@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Certificate Verification Portal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family:Arial;text-align:center;margin-top:100px;">
-    <h1>Certificate Verification Portal</h1>
-    <p>Scan the QR code on your certificate to verify it.</p>
+<body>
+  <h1>Certificate Verification Portal</h1>
+  <p>Scan the QR code on your certificate to verify it.</p>
+
+  <script type="module">
+    import { db } from "./firebase-config.js";
+    console.log("Firebase connected", db);
+  </script>
 </body>
 </html>
